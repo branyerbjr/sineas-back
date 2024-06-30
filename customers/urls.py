@@ -1,8 +1,9 @@
-# customers/urls.py
 from django.urls import path
-from .views import CustomerListCreate, CustomerRetrieveUpdateDestroy
+from .views import UserCreateAPIView, UserLoginAPIView, UserDetailAPIView, UserUpdateAPIView
 
 urlpatterns = [
-    path('customers/', CustomerListCreate.as_view(), name='customer-list-create'),
-    path('customers/<int:pk>/', CustomerRetrieveUpdateDestroy.as_view(), name='customer-retrieve-update-destroy'),
+    path('register/', UserCreateAPIView.as_view(), name='user-register'),
+    path('login/', UserLoginAPIView.as_view(), name='user-login'),
+    path('users/<int:pk>', UserDetailAPIView.as_view(), name='user-detail'),
+    path('users/<int:pk>/update/', UserUpdateAPIView.as_view(), name='user-update'),
 ]

@@ -2,3 +2,6 @@ Django
 djangorestframework
 djangorestframework-simplejwt
 django-cors-headers
+mysqlclient
+paho-mqtt==1.6.1
+requests

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class TopsConfig(AppConfig):
+class IotScaleConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'tops'
+    name = 'iot_scale'

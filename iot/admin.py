@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Hogar, Dispositivo
 
-# Register your models here.
+admin.site.register(Hogar)
+admin.site.register(Dispositivo)

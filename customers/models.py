@@ -29,7 +29,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=150, blank=True)
     first_name = models.CharField(max_length=30, blank=True)
     last_name = models.CharField(max_length=150, blank=True)
-    uuid_google = models.CharField(default=None, null=True, blank=True, unique=True)
+    uuid_google = models.CharField(max_length=255, default=None, null=True, blank=True, unique=True)
     profile_picture = models.URLField(blank=True, null=True)
     date_joined = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)

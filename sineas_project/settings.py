@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'customers',
     'products',
     'iot',
+    'iot_scale',
     'tips'
 ]
 
@@ -82,7 +83,7 @@ DATABASES = {
         'NAME': 'sineasdb',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': 'localhost',
+        'HOST': '',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
@@ -144,3 +145,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Configura el modelo de usuario personalizado
 AUTH_USER_MODEL = 'customers.CustomUser'
+
+# Configurar las credenciales MQTT
+MQTT_server = ""
+MQTT_port = 1883
+MQTT_user = ""
+MQTT_password = ""
